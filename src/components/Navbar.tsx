@@ -13,22 +13,9 @@ const Navbar = async () => {
       <div className='container max-w-7xl h-full mx-auto flex items-center justify-between gap-2'>
         {/* logo */}
         <Link href='/' className='flex gap-2 items-center'>
-          {/* Replace Icons.logo with an img tag for the JPEG file */}
-          <img src="/rvaOpen.jpeg" alt="Logo" className='h-8 w-8 sm:h-6 sm:w-6' />
+          <Icons.logo className='h-8 w-8 sm:h-6 sm:w-6' />
           <p className='hidden text-zinc-700 text-sm font-medium md:block'>OpenTrellis</p>
         </Link>
-
-
-
-
-
-        {/* logo */}
-        {/*<Link href='/' className='flex gap-2 items-center'>*/}
-        {/*  <Icons.logo className='h-8 w-8 sm:h-6 sm:w-6' />*/}
-        {/*  <p className='hidden text-zinc-700 text-sm font-medium md:block'>OPENTRELLIS</p>*/}
-        {/*</Link>*/}
-
-
 
         {/* search bar */}
         <SearchBar />

@@ -31,12 +31,6 @@ export const Icons = {
       </g>
     </svg>
   ),
-
-
-
-
-
-
   google: (props: LucideProps) => (
     <svg {...props} viewBox='0 0 24 24'>
       <path

@@ -70,7 +70,7 @@ const Post: FC<PostProps> = ({
             ) : null}
           </div>
         </div>
-      </div>Í
+      </div>
 
       <div className='bg-gray-50 z-20 text-sm px-4 py-4 sm:px-6'>
         <Link
