@@ -10,8 +10,8 @@ import { notFound } from 'next/navigation'
 import { ReactNode } from 'react'
 
 export const metadata: Metadata = {
-  title: 'OpenTrellis',
-  description: 'A Reddit clone built with Next.js and TypeScript.',
+  title: 'Open Trellis',
+  description: 'A space for entrepreneurs to communicate and learn from each other',
 }
 
 const Layout = async ({
@@ -102,13 +102,12 @@ const Layout = async ({
                 />
               ) : null}
               <Link
-                className={buttonVariants({
-                  variant: 'outline',
-                  className: 'w-full mb-6',
-                })}
-                href={`r/${slug}/submit`}>
-                Create Post
-              </Link>
+  href={`/r/${slug}/submit`}           // ← add the slash
+  className={buttonVariants({ variant: 'outline', className: 'w-full mb-6' })}
+>
+  Create Post
+</Link>
+
             </dl>
           </div>
         </div>

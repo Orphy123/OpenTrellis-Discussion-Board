@@ -25,14 +25,10 @@ const style = {
     lineHeight: '1.25rem',
   },
 }
-const EditorOutput: FC<EditorOutputProps> = ({ content }) => {
-  // Check if content or content.blocks is undefined
-  if (!content || !Array.isArray(content.blocks)) {
-    console.error('Invalid content structure:', content);
-    return <div>Content is not available or in an incorrect format.</div>;
-  }
 
+const EditorOutput: FC<EditorOutputProps> = ({ content }) => {
   return (
+    // @ts-expect-error
     <Output
       style={style}
       className='text-sm'
@@ -41,17 +37,5 @@ const EditorOutput: FC<EditorOutputProps> = ({ content }) => {
     />
   )
 }
-
-// const EditorOutput: FC<EditorOutputProps> = ({ content }) => {
-//   return (
-//     // @ts-expect-error
-//     <Output
-//       style={style}
-//       className='text-sm'
-//       renderers={renderers}
-//       data={content}
-//     />
-//   )
-// }
 
 export default EditorOutput
