@@ -1,8 +1,9 @@
-import { createNextRouteHandler } from 'uploadthing/next'
-
+import { createRouteHandler } from 'uploadthing/next'
 import { ourFileRouter } from './core'
 
-// Export routes for Next App Router
-export const { GET, POST } = createNextRouteHandler({
+export const { GET, POST } = createRouteHandler({
   router: ourFileRouter,
 })
+
+/** 👈 tell Next.js to run this file in the Node runtime, not Edge */
+export const runtime = 'nodejs'

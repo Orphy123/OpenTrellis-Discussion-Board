@@ -99,24 +99,34 @@ export const Editor: React.FC<EditorProps> = ({ subredditId }) => {
               endpoint: '/api/link',
             },
           },
+
           image: {
             class: ImageTool,
             config: {
               uploader: {
                 async uploadByFile(file: File) {
-                  // upload to uploadthing
-                  const [res] = await uploadFiles([file], 'imageUploader')
+                  // UploadThing v5 call signature
+
+                  const [res] = await uploadFiles('imageUploader', { files: [file] })
+                  // res = { url, name, size, key, type }
 
                   return {
                     success: 1,
                     file: {
-                      url: res.fileUrl,
+
+                      url: res.url,       // v5
                     },
                   }
                 },
               },
             },
           },
+
+
+
+
+
+
           list: List,
           code: Code,
           inlineCode: InlineCode,
